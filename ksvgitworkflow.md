@@ -1,3 +1,18 @@
+## Setup:
+# Git
+
+```
+#Bash
+git config --global init.defaultBranch main && \
+git config --global user.name "$(read -p 'Enter Git name: ' && echo "$REPLY")" && \
+git config --global user.email "$(read -p 'Enter Git email: ' && echo "$REPLY")"
+
+#Fish
+git config --global init.defaultBranch main && \
+git config --global user.name (read -P 'Enter Git name: ') && \
+git config --global user.email (read -P 'Enter Git email: ')
+```
+
 
 ## Initializing Git
 ```git init --initial-branch=main```
