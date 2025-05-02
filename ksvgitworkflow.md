@@ -1,4 +1,5 @@
 ## Setup:
+
 # Git
 
 ```
@@ -13,9 +14,17 @@ git config --global user.name (read -P 'Enter Git name: ') && \
 git config --global user.email (read -P 'Enter Git email: ')
 ```
 
+# GitHub
+```
+gh auth login && \
+gh auth status && \
+gh repo list
+```
 
 ## Initializing Git
-```git init --initial-branch=main```
+```
+git init --initial-branch=main
+```
 
 ## Github repo create with local repo name
 ```
@@ -23,13 +32,16 @@ gh repo create $(basename $(pwd)) --public --source=. --remote=origin --descript
 
 gh repo create (basename (pwd)) --public --source=. --remote=origin --description "(editor (mktemp))"     #Fish
 ```
+
 ## Repo rename sync 
+
 # (local -> remote)
 ```
 gh repo rename "$(basename "$(pwd)")" #Bash (OR)
 
 gh repo rename (basename (pwd)) #Fish
 ```
+
 # (remote -> local)
 ```
 #Bash
@@ -56,8 +68,10 @@ set -e oldfolder newfolder
 git add $(git rev-parse --show-toplevel)/* && git commit && git-town sync #Bash
 git add (git rev-parse --show-toplevel)/* && git commit && git-town sync  #Fish
 ```
+
 ## Create a new feature branch off the main branch
 git-town hack <feature-branch-name>
+
 ## Create a proposal to merge a feature branch
 ```
 git-town propose <feature-branch-name>
@@ -69,7 +83,7 @@ git-town propose <feature-branch-name>
 git-town switch
 ```
 
-For more features check: 
+## For more features check: 
 ```
 git-town --help
 ```
