@@ -1,4 +1,7 @@
+Do checkout ways to setup git in nix way like programs.git= ...
+
 ## Setup:
+
 
 # Git
 
